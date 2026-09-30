@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fesche — Task Manager, Calendar & Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Fesche.css">
+</head>
+
+<body>
+    <div class="aurora-backdrop" aria-hidden="true">
+        <div class="aurora-ribbon aurora-ribbon-primary"></div>
+        <div class="aurora-ribbon aurora-ribbon-cyan"></div>
+        <div class="aurora-ribbon aurora-ribbon-magenta"></div>
+    </div>
+
+    <input type="radio" name="viewMode" id="view-dashboard" class="mode-input" checked>
+    <input type="radio" name="viewMode" id="view-blueprint" class="mode-input">
+
+    <div class="app-shell">
+        <header class="app-header">
+            <div class="header-left">
+                <div class="brand-logo">
+                    <span class="logo-symbol">❖</span>
+                </div>
+                <div class="brand-info">
+                    <h1 class="brand-name">Fesche</h1>
+                    <span class="brand-subtitle">Workspace Schedule System</span>
+                </div>
+            </div>
+
+            <div class="header-center">
+                <div class="status-pill">
+                    <span class="status-indicator"></span>
+                    <span class="status-text">Pipeline Connected • Sep 30, 2026</span>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="mode-switcher">
+                    <label for="view-dashboard" class="switch-label label-dashboard">
+                        <span class="switch-icon">⚡</span>
+                        <span>Dashboard</span>
+                    </label>
+                    <label for="view-blueprint" class="switch-label label-blueprint">
+                        <span class="switch-icon">📐</span>
+                        <span>Blueprint</span>
+                    </label>
+                    <div class="switch-slider"></div>
+                </div>
+
+                <div class="header-action-btn search-btn">
+                    <span class="search-icon">⌕</span>
+                    <span class="kbd-hint">⌘K</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="schematic-viewport">
+            <div class="canvas-wrapper">
+                <svg class="pipeline-schematic" viewBox="0 0 1100 680" fill="none" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="pulse-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+                            <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
+                            <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+
+                    <path class="wire-base"
+                        d="M 280 95 L 280 66 A 16 16 0 0 1 296 50 L 934 50 A 16 16 0 0 1 950 66 L 950 130" />
+
+                    <path class="wire-base"
+                        d="M 400 575 L 440 575 A 16 16 0 0 0 456 559 L 456 286 A 16 16 0 0 1 472 270 L 554 270 A 16 16 0 0 0 570 254 L 570 50" />
+
+                    <path class="wire-pulse wire-pulse-1"
+                        d="M 280 95 L 280 66 A 16 16 0 0 1 296 50 L 934 50 A 16 16 0 0 1 950 66 L 950 130" />
+
+                    <path class="wire-pulse wire-pulse-2"
+                        d="M 400 575 L 440 575 A 16 16 0 0 0 456 559 L 456 286 A 16 16 0 0 1 472 270 L 554 270 A 16 16 0 0 0 570 254 L 570 50" />
+
+                    <circle cx="280" cy="95" r="5.5" class="terminal-node" />
+                    <circle cx="950" cy="130" r="5.5" class="terminal-node" />
+                    <circle cx="400" cy="575" r="5.5" class="terminal-node" />
+                    <circle cx="570" cy="50" r="5" class="junction-node" />
+                </svg>
+
+                <section class="card card-task" id="card-task-manager">
+                    <div class="card-hero-header">
+                        <div class="title-wrap">
+                            <span class="card-tag-pill">Tasks</span>
+                            <h2 class="card-headline">Task<br>manager</h2>
+                        </div>
+                        <div class="counter-badge">
+                            <span class="count-highlight">3</span>/5 done
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="task-progress-track">
+                            <div class="task-progress-fill"></div>
+                        </div>
+
+                        <div class="task-list">
+                            <label class="task-row">
+                                <input type="checkbox" checked class="task-checkbox">
+                                <span class="custom-check"></span>
+                                <span class="task-title">Design system tokens & grid</span>
+                                <span class="pill-tag tag-blue">Design</span>
+                            </label>
+
+                            <label class="task-row">
+                                <input type="checkbox" checked class="task-checkbox">
+                                <span class="custom-check"></span>
+                                <span class="task-title">Wireframe schematic bus lines</span>
+                                <span class="pill-tag tag-slate">Layout</span>
+                            </label>
+
+                            <label class="task-row">
+                                <input type="checkbox" checked class="task-checkbox">
+                                <span class="custom-check"></span>
+                                <span class="task-title">Connect calendar date nodes</span>
+                                <span class="pill-tag tag-emerald">Sync</span>
+                            </label>
+
+                            <label class="task-row">
+                                <input type="checkbox" class="task-checkbox">
+                                <span class="custom-check"></span>
+                                <span class="task-title">Calibrate keyboard shortcuts</span>
+                                <span class="pill-tag tag-amber">High</span>
+                            </label>
+
+                            <label class="task-row">
+                                <input type="checkbox" class="task-checkbox">
+                                <span class="custom-check"></span>
+                                <span class="task-title">Review sprint notes export</span>
+                                <span class="pill-tag tag-purple">Notes</span>
+                            </label>
+                        </div>
+
+                        <div class="card-footer-action">
+                            <div class="mock-input-field">
+                                <span class="plus-glyph">+</span>
+                                <span class="input-placeholder">Create new task...</span>
+                                <kbd class="key-tag">↵</kbd>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card card-notes" id="card-notes">
+                    <div class="card-hero-header">
+                        <div class="title-wrap">
+                            <span class="card-tag-pill">Workspace Memos</span>
+                            <h2 class="card-headline">notes</h2>
+                        </div>
+                        <div class="notes-count">
+                            <span>4 pinned</span>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="notes-grid">
+                            <article class="note-card-item">
+                                <div class="note-item-header">
+                                    <h3 class="note-item-title">📌 Architecture Spec</h3>
+                                    <span class="note-time">Today</span>
+                                </div>
+                                <p class="note-item-preview">Three-node bus layout integrating tasks, monthly agenda &
+                                    memo board.</p>
+                                <div class="note-item-tags">
+                                    <span class="mini-tag">#system</span>
+                                    <span class="mini-tag">#ui</span>
+                                </div>
+                            </article>
+
+                            <article class="note-card-item">
+                                <div class="note-item-header">
+                                    <h3 class="note-item-title">💡 Sprint Keynotes</h3>
+                                    <span class="note-time">2h ago</span>
+                                </div>
+                                <p class="note-item-preview">Keep HTML/CSS pristine. Responsive SVG layout matching
+                                    blueprint.</p>
+                                <div class="note-item-tags">
+                                    <span class="mini-tag">#fesche</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card card-calendar" id="card-calendar">
+                    <div class="card-hero-header">
+                        <div class="title-wrap">
+                            <span class="card-tag-pill">Agenda</span>
+                            <h2 class="card-headline">calendar</h2>
+                        </div>
+                        <div class="calendar-month-badge">
+                            <button type="button" class="cal-nav-btn">‹</button>
+                            <span class="cal-month-name">Oct 2026</span>
+                            <button type="button" class="cal-nav-btn">›</button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="calendar-widget">
+                            <div class="cal-weekdays">
+                                <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
+                            </div>
+                            <div class="cal-days-grid">
+                                <span class="cal-day dim">27</span>
+                                <span class="cal-day dim">28</span>
+                                <span class="cal-day dim">29</span>
+                                <span class="cal-day has-dot">30</span>
+                                <span class="cal-day">1</span>
+                                <span class="cal-day has-dot">2</span>
+                                <span class="cal-day">3</span>
+                                <span class="cal-day">4</span>
+                                <span class="cal-day">5</span>
+                                <span class="cal-day has-dot">6</span>
+                                <span class="cal-day">7</span>
+                                <span class="cal-day">8</span>
+                                <span class="cal-day">9</span>
+                                <span class="cal-day">10</span>
+                                <span class="cal-day">11</span>
+                                <span class="cal-day">12</span>
+                                <span class="cal-day">13</span>
+                                <span class="cal-day">14</span>
+                                <span class="cal-day has-dot">15</span>
+                                <span class="cal-day">16</span>
+                                <span class="cal-day">17</span>
+                                <span class="cal-day">18</span>
+                                <span class="cal-day">19</span>
+                                <span class="cal-day">20</span>
+                                <span class="cal-day">21</span>
+                                <span class="cal-day">22</span>
+                                <span class="cal-day">23</span>
+                                <span class="cal-day">24</span>
+                                <span class="cal-day">25</span>
+                                <span class="cal-day">26</span>
+                                <span class="cal-day">27</span>
+                                <span class="cal-day">28</span>
+                                <span class="cal-day">29</span>
+                                <span class="cal-day is-today">30</span>
+                                <span class="cal-day dim">31</span>
+                            </div>
+                        </div>
+
+                        <div class="calendar-agenda-preview">
+                            <div class="agenda-item">
+                                <span class="agenda-indicator dot-cyan"></span>
+                                <div class="agenda-details">
+                                    <span class="agenda-time">10:00 AM</span>
+                                    <span class="agenda-event">Sprint Sync & Pipeline Review</span>
+                                </div>
+                            </div>
+                            <div class="agenda-item">
+                                <span class="agenda-indicator dot-purple"></span>
+                                <div class="agenda-details">
+                                    <span class="agenda-time">03:30 PM</span>
+                                    <span class="agenda-event">UI Design Walkthrough</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="app-dock">
+            <div class="dock-module">
+                <span class="dock-icon">📋</span>
+                <span class="dock-label">Taskbar</span>
+                <span class="dock-kbd">T</span>
+            </div>
+            <div class="dock-divider"></div>
+            <div class="dock-module">
+                <span class="dock-icon">📅</span>
+                <span class="dock-label">Calendar</span>
+                <span class="dock-kbd">C</span>
+            </div>
+            <div class="dock-divider"></div>
+            <div class="dock-module">
+                <span class="dock-icon">📝</span>
+                <span class="dock-label">Notes</span>
+                <span class="dock-kbd">N</span>
+            </div>
+            <div class="dock-divider"></div>
+            <div class="dock-module dock-active">
+                <span class="dock-icon">⌘</span>
+                <span class="dock-label">Commands</span>
+                <span class="dock-kbd">K</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
