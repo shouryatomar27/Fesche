@@ -436,6 +436,9 @@ body {
 }
 
 .task-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -443,20 +446,30 @@ body {
     overflow-y: auto;
 }
 
-.task-row {
+.task-list li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.task-row,
+.task-list li label {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 5px 8px;
     border-radius: 8px;
     cursor: pointer;
+    width: 100%;
 }
 
-.task-row:hover {
+.task-row:hover,
+.task-list li label:hover {
     background-color: #f8fafc;
 }
 
-.task-checkbox {
+.task-checkbox,
+.task-list input[type="checkbox"] {
     position: absolute;
     opacity: 0;
 }
@@ -480,12 +493,14 @@ body {
     opacity: 0;
 }
 
-.task-checkbox:checked+.custom-check {
+.task-checkbox:checked+.custom-check,
+.task-list input[type="checkbox"]:checked+.custom-check {
     background: #0f172a;
     border-color: #0f172a;
 }
 
-.task-checkbox:checked+.custom-check::after {
+.task-checkbox:checked+.custom-check::after,
+.task-list input[type="checkbox"]:checked+.custom-check::after {
     opacity: 1;
 }
 
@@ -499,12 +514,14 @@ body {
     text-overflow: ellipsis;
 }
 
-.task-checkbox:checked~.task-title {
+.task-checkbox:checked~.task-title,
+.task-list input[type="checkbox"]:checked~.task-title {
     text-decoration: line-through;
     color: #94a3b8;
 }
 
-.pill-tag {
+.pill-tag,
+[class*="tag-"] {
     font-size: 10px;
     font-weight: 600;
     padding: 2px 7px;
