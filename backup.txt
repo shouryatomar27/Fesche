@@ -1,0 +1,28 @@
+<div class="card-body">
+                        <div class="notes-grid">
+                            <article class="note-card-item">
+                                <div class="note-item-header">
+                                    <h3 class="note-item-title">📌 Architecture Spec</h3>
+                                    <span class="note-time">Today</span>
+                                </div>
+                                <p class="note-item-preview">Three-node bus layout integrating tasks, monthly agenda &
+                                    memo board.</p>
+                                <div class="note-item-tags">
+                                    <span class="mini-tag">#system</span>
+                                    <span class="mini-tag">#ui</span>
+                                </div>
+                            </article>
+
+                            <article class="note-card-item">
+                                <div class="note-item-header">
+                                    <h3 class="note-item-title">💡 Sprint Keynotes</h3>
+                                    <span class="note-time">2h ago</span>
+                                </div>
+                                <p class="note-item-preview">Keep HTML/CSS pristine. Responsive SVG layout matching
+                                    blueprint.</p>
+                                <div class="note-item-tags">
+                                    <span class="mini-tag">#fesche</span>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
