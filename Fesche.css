@@ -882,3 +882,8 @@ body {
     padding: 2px;
     border: none;
 } */
+
+.task-stats {
+    color: black;
+    padding: 5px 10px;
+}

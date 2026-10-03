@@ -73,6 +73,12 @@ const taskInput = document.querySelector("#taskInput");
 const addTaskBtn = document.querySelector("#addTaskBtn");
 const taskList = document.querySelector("#taskList");
 
+const totalCount = document.querySelector("#totalCount");
+const activeCount = document.querySelector("#activeCount");
+const completedCount = document.querySelector("#completedCount");
+
+
+
 let tasks = [
     { id: 1, title: "Design system tokens & grid", completed: true },
     { id: 2, title: "Calibrate keyboard shortcuts", completed: false },
@@ -155,3 +161,7 @@ taskInput.addEventListener("keydown", function (event) {
 });
 
 renderTasks();
+
+
+
+
