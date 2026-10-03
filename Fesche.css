@@ -404,6 +404,8 @@ body {
     height: calc(350 / 680 * 100%);
     background-color: var(--card-task-bg);
     box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.7), 0 0 35px rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .counter-badge {
@@ -589,6 +591,8 @@ body {
     height: calc(400/ 680 * 100%);
     background-color: var(--card-slate-bg);
     box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .notes-count {
@@ -826,6 +830,7 @@ body {
     font-weight: 800;
     text-align: center;
 }
+
 /* add dock or footer display none */
 .app-dock {
     /* display: inline-flex; */
@@ -894,78 +899,92 @@ body {
 /* CSS FOR NOTES */
 
 .note-editor {
- padding-left: 20px;
+    padding-left: 20px;
 }
+
 .note-card {
- padding: 12px;
- margin-bottom: 8px;
- border-radius: 10px;
- background: #252530;
- cursor: pointer;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    background: #252530;
+    cursor: pointer;
 }
+
 .note-card.active {
- outline: 2px solid #667eea;
+    outline: 2px solid #667eea;
 }
+
 .note-card h3 {
- margin: 0 0 5px;
+    margin: 0 0 5px;
 }
+
 .note-card p {
- margin: 0;
- opacity: 0.65;
+    margin: 0;
+    opacity: 0.65;
 }
+
 #noteForm {
- display: flex;
- flex-direction: column;
- gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 #noteTitle,
 #noteContent {
- width: 100%;
- padding: 12px;
- border: none;
- border-radius: 8px;
- font: inherit;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font: inherit;
 }
+
 #noteContent {
- min-height: 100px;
- resize: vertical;
+    min-height: 100px;
+    resize: vertical;
 }
+
 .editor-actions {
- display: flex;
- gap: 10px;
+    display: flex;
+    gap: 10px;
 }
+
 button {
- padding: 10px 15px;
- border: none;
- border-radius: 8px;
- cursor: pointer;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
+
 .hidden {
- display: none;
+    display: none;
 }
+
 .empty-state {
- display: grid;
- place-items: center;
- min-height: 100%;
- text-align: center;
+    display: grid;
+    place-items: center;
+    min-height: 100%;
+    text-align: center;
 }
+
 @media (max-width: 700px) {
- .notes-layout {
- grid-template-columns: 1fr;
- }
- .notes-sidebar {
- border-right: none;
- border-bottom: 1px solid #34343f;
- padding-right: 0;
- padding-bottom: 15px;
- }
- .note-editor {
- padding-left: 0;
- padding-top: 20px;
- }
+    .notes-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .notes-sidebar {
+        border-right: none;
+        border-bottom: 1px solid #34343f;
+        padding-right: 0;
+        padding-bottom: 15px;
+    }
+
+    .note-editor {
+        padding-left: 0;
+        padding-top: 20px;
+    }
 }
- 
-.empty-state{
+
+.empty-state {
     color: black;
     padding-bottom: 10px;
 }
