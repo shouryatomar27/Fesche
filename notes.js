@@ -61,8 +61,10 @@ function renderNotes() {
 
     notesList.appendChild(card);
 
+
+    // click function to select the note
     card.addEventListener("click", function () {
-      selectedNote(note.id);
+      selectNote(note.id);
       1;
     });
   });
@@ -132,3 +134,44 @@ noteForm.addEventListener("submit", function(event) {
  event.preventDefault();
  saveNote();
 });
+
+function deleteSelectedNote(){
+  if (selectedNoteId === null){
+    return;
+  }
+  const index = notes.findIndex(function(note){
+    return note.id === selectedNoteId;
+  });
+  if (index === -1){
+    return;
+  }
+
+  notes.splice(index, 1);
+  selectedNoteId = null;
+
+  renderNotes();
+  renderEditor();
+
+}
+deleteNoteBtn.addEventListener("click", function(){
+  deleteSelectedNote();
+})
+
+
+function getPreview(content) {
+ const cleanContent = content.trim();
+ if (cleanContent === "") {
+ return "Empty note";
+ }
+ if (cleanContent.length <= 60) {
+ return cleanContent;
+ }
+ return cleanContent.slice(0, 60) + "...";
+}
+const preview = document.createElement("p");
+preview.textContent = getPreview(note.content);
+
+const readableTime =
+ new Date(note.updatedAt).toLocaleString();
+noteUpdatedAt.textContent =
+ `Last updated: ${readableTime}`;
