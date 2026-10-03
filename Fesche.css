@@ -988,3 +988,78 @@ button {
     color: black;
     padding-bottom: 10px;
 }
+
+calendar-header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 20px;
+}
+.calendar-header button {
+ cursor: pointer;
+}
+.weekday-row,
+.calendar-grid {
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+}
+.weekday-row div {
+ padding: 12px 6px;
+ text-align: center;
+ color: #9da8be;
+}
+.calendar-grid {
+ gap: 8px;
+}
+.day-cell {
+ min-height: 90px;
+ padding: 10px;
+ background: #242430;
+ border-radius: 12px;
+ cursor: pointer;
+ position: relative;
+}
+.day-cell:hover {
+ background: #2d2d3a;
+}
+.day-cell.empty {
+ background: transparent;
+ cursor: default;
+}
+.day-cell.selected {
+ outline: 2px solid #6d82eae1;
+}
+.day-cell.today {
+ font-weight: bold;
+}
+.event-dot {
+ width: 7px;
+ height: 7px;
+ border-radius: 50%;
+ margin-top: 10px;
+ background: white;
+}
+.event-item {
+ display: flex;
+ justify-content: space-between;
+ gap: 12px;
+ margin-top: 10px;
+ padding: 12px;
+ background: #242430;
+ border-radius: 10px;
+}
+@media (max-width: 600px) {
+ .day-cell {
+ min-height: 58px;
+ padding: 7px;
+ }
+ .calendar-app {
+ padding: 14px;
+ }
+}
+.calendar-header {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ gap: 20px;
+}
