@@ -666,6 +666,7 @@ body {
     height: calc(330 / 680 * 100%);
     background-color: var(--card-slate-bg);
     box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+    overflow-y: auto; 
 }
 
 .calendar-month-badge {
@@ -992,7 +993,7 @@ button {
 calendar-header {
  display: flex;
  align-items: center;
- justify-content: space-between;
+ justify-content: center;
  gap: 20px;
 }
 .calendar-header button {
@@ -1012,8 +1013,9 @@ calendar-header {
  gap: 8px;
 }
 .day-cell {
- min-height: 90px;
- padding: 10px;
+ text-align: center;
+ min-height: 37px;
+ padding: 6px;
  background: #242430;
  border-radius: 12px;
  cursor: pointer;
@@ -1026,6 +1028,7 @@ calendar-header {
  background: transparent;
  cursor: default;
 }
+
 .day-cell.selected {
  outline: 2px solid #6d82eae1;
 }
@@ -1062,4 +1065,17 @@ calendar-header {
  align-items: center;
  justify-content: space-between;
  gap: 20px;
+}
+#monthTitle{
+    width: 148px;
+    color: black;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.678);
+}
+#monthTitleDiv{
+    width: 148px;
+    text-align: center;
 }
