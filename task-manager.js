@@ -79,11 +79,7 @@ const completedCount = document.querySelector("#completedCount");
 
 
 
-let tasks = [
-    { id: 1, title: "Design system tokens & grid", completed: true },
-    { id: 2, title: "Calibrate keyboard shortcuts", completed: false },
-    { id: 3, title: "Review sprint notes export", completed: false }
-];
+let tasks = [];
 
 function addTask() {
     const title = taskInput.value.trim();
@@ -94,7 +90,7 @@ function addTask() {
         title: title,
         completed: false
     });
-
+    saveTasks();
     taskInput.value = "";
     taskInput.focus();
     renderTasks();
@@ -104,6 +100,7 @@ function deleteTask(id) {
     tasks = tasks.filter(function (task) {
         return task.id !== id;
     });
+    saveTasks();
     renderTasks();
 }
 
@@ -135,6 +132,7 @@ function renderTasks() {
 
         checkbox.addEventListener("change", function () {
             task.completed = checkbox.checked;
+            saveTasks();
             renderTasks();
         });
 
@@ -160,6 +158,7 @@ taskInput.addEventListener("keydown", function (event) {
     }
 });
 
+loadTasks();
 renderTasks();
 
 

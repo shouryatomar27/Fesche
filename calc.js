@@ -161,6 +161,7 @@ function addEvent() {
  time: time
  };
  events.push(newEvent);
+ saveEvents();
  eventForm.reset();
  renderCalendarGrid();
  renderEvents();
@@ -173,6 +174,7 @@ function deleteEvent(eventId) {
  return;
  }
  events.splice(index, 1);
+ saveEvents();
  renderCalendarGrid();
  renderEvents();
 }
@@ -192,6 +194,7 @@ function editEvent(eventId) {
  return;
  }
  event.title = cleanedTitle;
+ saveEvents();
  renderCalendarGrid();
  renderEvents();
 }
@@ -222,5 +225,6 @@ function renderCalendar() {
  updateMonthTitle();
  renderCalendarGrid();
 }
+loadEvents();
 renderCalendar();
-renderEvents()
+renderEvents();

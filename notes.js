@@ -23,7 +23,7 @@ function createNote() {
 
   notes.push(newNote);
   selectedNoteId = newNote.id;
-
+  saveNotes();
   renderNotes();
   renderEditor();
 
@@ -126,6 +126,7 @@ function saveNote() {
   note.title = title;
   note.content = content;
   note.updatedAt = Date.now();
+  saveNotes();
   renderNotes();
   renderEditor();
 }
@@ -148,7 +149,7 @@ function deleteSelectedNote(){
 
   notes.splice(index, 1);
   selectedNoteId = null;
-
+  saveNotes();
   renderNotes();
   renderEditor();
 
@@ -158,20 +159,6 @@ deleteNoteBtn.addEventListener("click", function(){
 })
 
 
-function getPreview(content) {
- const cleanContent = content.trim();
- if (cleanContent === "") {
- return "Empty note";
- }
- if (cleanContent.length <= 60) {
- return cleanContent;
- }
- return cleanContent.slice(0, 60) + "...";
-}
-const preview = document.createElement("p");
-preview.textContent = getPreview(note.content);
-
-const readableTime =
- new Date(note.updatedAt).toLocaleString();
-noteUpdatedAt.textContent =
- `Last updated: ${readableTime}`;
+loadNotes();
+renderNotes();
+renderEditor();

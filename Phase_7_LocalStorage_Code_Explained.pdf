@@ -1,0 +1,305 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+3 0 obj
+<< /Length 4510 >>
+stream
+BT /F1 18 Tf 0.08 0.12 0.22 rg 50 800 Td (Phase 7 - Local Storage) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 776 Td (Fesche Task Manager  |  Notes  |  Calendar) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 761 Td (A study guide for YOUR project code. Read this with localstorage.js open.) Tj ET
+0.75 0.80 0.86 RG 0.6 w 50 750 m 545 750 l S
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 728 Td (1. What this phase is) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 708 Td (Before Phase 7, tasks, notes and events lived only in JavaScript arrays. Refresh the page) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 693 Td (and they disappeared.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 678 Td (After Phase 7, the browser remembers those arrays. The UI is rebuilt from saved data when) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 663 Td (the page starts.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 648 Td (localStorage is not a database, not the cloud, and not your app state. It is a notebook) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 633 Td (the browser keeps for this site.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 612 Td (The one idea) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 595 Td (JavaScript arrays are still the source of truth while the page is open.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 580 Td (localStorage is where those arrays are remembered between refreshes.) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 561 Td (CHANGE DATA  ->  SAVE  ->  RENDER) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 550 Td (PAGE START    ->  LOAD  ->  RENDER) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 523 Td (2. What localStorage is) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 503 Td (localStorage is a key-value store built into the browser. You save a string under a key,) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 488 Td (and later you read that same key.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 473 Td (It survives refresh and later visits to the same site, in the same browser, on the same) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 458 Td (computer. It does not sync to other devices.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 437 Td (The four operations) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 416 Td (localStorage.setItem\(key, value\);   // save) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 405 Td (localStorage.getItem\(key\);          // read  \(null if missing\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 394 Td (localStorage.removeItem\(key\);       // delete one key) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 383 Td (localStorage.clear\(\);               // delete ALL keys for this site) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 366 Td (Do not use clear\(\) in this project. It would wipe everything. Use removeItem if you need) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 351 Td (to reset one dataset.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 330 Td (Console experiment) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 309 Td (localStorage.setItem\("phase7Test", "hello"\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 298 Td (console.log\(localStorage.getItem\("phase7Test"\)\);  // hello) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 287 Td (localStorage.removeItem\("phase7Test"\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 276 Td (console.log\(localStorage.getItem\("phase7Test"\)\);  // null) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 249 Td (3. Why JSON exists) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 229 Td (localStorage only stores strings. If you pass an object or array directly, the browser) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 214 Td (turns it into a useless string like [object Object].) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 199 Td (JSON is text that can represent objects and arrays. Two methods convert back and forth:) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 184 Td (- JSON.stringify\(data\)  - JavaScript value to string  \(before save\)) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 169 Td (- JSON.parse\(string\)    - string back to JavaScript  \(after load\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 150 Td (const tasks = [{ id: 1, title: "Study JS", completed: false }];) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 139 Td (localStorage.setItem\("tasks", JSON.stringify\(tasks\)\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 128 Td (const loaded = JSON.parse\(localStorage.getItem\("tasks"\)\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 117 Td (console.log\(loaded[0].title\);  // Study JS) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 90 Td (4. Your storage keys) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 70 Td (Three separate keys. One problem in notes does not destroy tasks or events.) Tj ET
+endstream
+endobj
+4 0 obj
+<< /Length 4593 >>
+stream
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 800 Td (tasks    ->  array of task objects) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 789 Td (notes    ->  array of note objects) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 778 Td (events   ->  array of calendar event objects) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 761 Td (Never use a vague key like data. Keep names matching the arrays.) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 736 Td (5. Script order in Fesche.html) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 716 Td (Helpers must exist before the other files call them. That is why localstorage.js is first.) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 697 Td (<script src="localstorage.js"></script>) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 686 Td (<script src="task-manager.js"></script>) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 675 Td (<script src="notes.js"></script>) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 664 Td (<script src="calc.js"></script>) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 647 Td (Classic script tags share one page. saveTasks can see the tasks array even though that) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 632 Td (array is declared in task-manager.js. The function looks up tasks at call time, not at) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 617 Td (definition time.) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 592 Td (6. localstorage.js  - line by line) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 566 Td (saveData\(key, data\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 545 Td (function saveData\(key, data\) {) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 534 Td (  localStorage.setItem\(key, JSON.stringify\(data\)\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 523 Td (}) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 506 Td (Takes a key name and any JavaScript value \(your array\). Turns the array into a JSON) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 491 Td (string, then stores it. One helper for all three datasets.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 470 Td (loadData\(key, fallback\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 449 Td (function loadData\(key, fallback\) {) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 438 Td (  const stored = localStorage.getItem\(key\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 427 Td (  if \(!stored\) {) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 416 Td (    return fallback;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 405 Td (  }) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 394 Td (  try {) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 383 Td (    const parsed = JSON.parse\(stored\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 372 Td (    if \(Array.isArray\(parsed\)\) {) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 361 Td (      return parsed;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 350 Td (    }) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 339 Td (    return fallback;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 328 Td (  } catch \(error\) {) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 317 Td (    console.error\("Could not load " + key + ":", error\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 306 Td (    return fallback;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 295 Td (  }) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 284 Td (}) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 267 Td (Step 1: getItem. If the key was never saved, stored is null. Return fallback \(always [] in) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 252 Td (this app\).) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 237 Td (Step 2: try JSON.parse. Bad text in DevTools would crash the whole page without try/catch.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 222 Td (On failure, log the error and return [].) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 207 Td (Step 3: Array.isArray. JSON.parse\('{}'\) succeeds but gives an object, not a list.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 192 Td (Tasks/notes/events must be arrays, so reject anything else.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 171 Td (The six small wrappers) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 150 Td (function saveTasks\(\) { saveData\("tasks", tasks\); }) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 139 Td (function loadTasks\(\) { tasks = loadData\("tasks", []\); }) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 128 Td ( ) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 117 Td (function saveNotes\(\) { saveData\("notes", notes\); }) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 106 Td (function loadNotes\(\) { notes = loadData\("notes", []\); }) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 95 Td ( ) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 84 Td (function saveEvents\(\) { saveData\("events", events\); }) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 73 Td (function loadEvents\(\) { events = loadData\("events", []\); }) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Length 3893 >>
+stream
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 800 Td (save* writes the current array. load* replaces the current array with whatever was stored,) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 785 Td (or [] if nothing valid exists.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 770 Td (Why wrappers? So task-manager.js never mentions localStorage.setItem. It only says) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 755 Td (saveTasks\(\) after the array changes.) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 730 Td (7. Tasks  \(task-manager.js\)) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 710 Td (The array starts empty. Sample tasks were removed so storage, not hardcoded data, owns the) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 695 Td (list.) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 676 Td (let tasks = [];) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 653 Td (Startup) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 632 Td (loadTasks\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 621 Td (renderTasks\(\);) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 604 Td (Load first, then draw. If you render first you flash an empty list, then overwrite it.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 589 Td (Worse: if you never load, you always start from [].) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 568 Td (Add) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 547 Td (tasks.push\({) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 536 Td (    id: Date.now\(\),) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 525 Td (    title: title,) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 514 Td (    completed: false) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 503 Td (}\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 492 Td (saveTasks\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 481 Td (renderTasks\(\);) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 464 Td (id: Date.now\(\) is a unique number from the current time. completed starts false. Then) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 449 Td (save, then redraw.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 428 Td (Delete) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 407 Td (tasks = tasks.filter\(function \(task\) {) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 396 Td (    return task.id !== id;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 385 Td (}\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 374 Td (saveTasks\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 363 Td (renderTasks\(\);) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 346 Td (filter keeps every task whose id is not the one you deleted. Then save the new array.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 325 Td (Complete checkbox) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 304 Td (task.completed = checkbox.checked;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 293 Td (saveTasks\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 282 Td (renderTasks\(\);) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 265 Td (The object already lives inside the tasks array, so changing task.completed changes the) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 250 Td (array. Save writes that change.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 235 Td (Important: do not only remove the <li> from the DOM. If the array still has the task,) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 220 Td (refresh brings it back.) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 195 Td (8. Notes  \(notes.js\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 171 Td (let notes = [];) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 160 Td (let selectedNoteId = null;) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 143 Td (notes is persisted. selectedNoteId is only which card is open right now. It is not saved.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 128 Td (After refresh, no note is selected until you click one. That is Phase 7, not a bug.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 107 Td (Create) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 86 Td (notes.push\(newNote\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 75 Td (selectedNoteId = newNote.id;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 64 Td (saveNotes\(\);) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 3302 >>
+stream
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 800 Td (renderNotes\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 789 Td (renderEditor\(\);) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 766 Td (Edit \(saveNote\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 745 Td (note.title = title;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 734 Td (note.content = content;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 723 Td (note.updatedAt = Date.now\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 712 Td (saveNotes\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 701 Td (renderNotes\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 690 Td (renderEditor\(\);) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 673 Td (You mutate the object already in the array, then save the whole notes array.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 652 Td (Delete) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 631 Td (notes.splice\(index, 1\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 620 Td (selectedNoteId = null;) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 609 Td (saveNotes\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 598 Td (renderNotes\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 587 Td (renderEditor\(\);) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 570 Td (splice removes 1 item at that index. Then clear selection so the editor goes back to empty) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 555 Td (state.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 534 Td (Startup) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 513 Td (loadNotes\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 502 Td (renderNotes\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 491 Td (renderEditor\(\);) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 464 Td (9. Calendar  \(calc.js\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 440 Td (let events = [];) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 423 Td (currentDate and selectedDate are not saved. The calendar still opens on today. Only the) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 408 Td (events array is persisted.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 387 Td (Add) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 366 Td (events.push\(newEvent\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 355 Td (saveEvents\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 344 Td (renderCalendarGrid\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 333 Td (renderEvents\(\);) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 316 Td (newEvent has id, title, date \(YYYY-MM-DD from the selected day\), and time.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 295 Td (Delete / edit) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 278 Td (deleteEvent splices by id then saveEvents. editEvent changes event.title then saveEvents.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 263 Td (Both re-render the grid and the list.) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 242 Td (Startup) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 221 Td (loadEvents\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 210 Td (renderCalendar\(\);) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 199 Td (renderEvents\(\);) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 172 Td (10. Data shapes) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 146 Td (Task) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 125 Td ({ id: 1738..., title: "Study JavaScript", completed: false }) Tj ET
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 102 Td (Note) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 81 Td ({ id, title, content, createdAt, updatedAt }) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Length 4004 >>
+stream
+BT /F1 12 Tf 0.15 0.20 0.35 rg 50 800 Td (Event) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 779 Td ({ id, title, date: "2026-10-05", time: "10:00" }) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 762 Td (date is a string key, not a Date object. JSON can store strings and numbers easily. Date) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 747 Td (objects would not survive stringify/parse the way you expect.) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 722 Td (11. How to inspect storage) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 702 Td (Chrome / Edge: DevTools -> Application -> Storage -> Local Storage -> your site.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 687 Td (You should see three keys. Values look like JSON arrays, not JavaScript objects.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 672 Td (- Add a task. Open Local Storage. Confirm the tasks string grew.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 657 Td (- Refresh. Confirm the task is still on screen.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 642 Td (- Delete it. Confirm the stored array shrank.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 627 Td (- Repeat for notes and events.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 612 Td (When the UI looks wrong, check both sides: the array in the Console, and the JSON in) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 597 Td (Application.) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 572 Td (12. Common bugs \(and how this code avoids them\)) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 552 Td (- Saving an object without stringify. Fix: saveData always stringifies.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 537 Td (- Forgetting parse. Fix: loadData always parses.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 522 Td (- Save but no render. Fix: every mutation calls save then render.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 507 Td (- Render before load. Fix: loadTasks/loadNotes/loadEvents run first.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 492 Td (- Delete from DOM only. Fix: delete from the array, then save.) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 477 Td (- JSON.parse crash on startup. Fix: try/catch + fallback [].) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 462 Td (- Stored value is {} not []. Fix: Array.isArray check.) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 437 Td (13. What this is NOT) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 417 Td (Not a backend. Not login. Not Firebase. Not IndexedDB. Not Phase 8 \(linking tasks, notes) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 402 Td (and calendar together\).) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 387 Td (Data lives in one browser profile. Clearing site data wipes it. Another computer will not) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 372 Td (see it.) Tj ET
+BT /F1 14 Tf 0.10 0.25 0.55 rg 50 347 Td (14. Mental model to memorize) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 323 Td (USER clicks / types) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 312 Td (  -> change tasks / notes / events) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 301 Td (  -> saveData  \(stringify + setItem\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 290 Td (  -> render UI) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 279 Td ( ) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 268 Td (PAGE reload) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 257 Td (  -> loadData  \(getItem + parse\)) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 246 Td (  -> put result into the array) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 235 Td (  -> render UI) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 218 Td (Four lines:) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 199 Td (JSON.stringify\(data\)     // before saving) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 188 Td (JSON.parse\(string\)       // after loading) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 177 Td (localStorage.setItem\(\)   // save) Tj ET
+BT /F2 8 Tf 0.15 0.18 0.22 rg 50 166 Td (localStorage.getItem\(\)   // load) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 137 Td (If you can add three tasks, two notes and two events, refresh, and everything comes back,) Tj ET
+BT /F1 11 Tf 0.12 0.14 0.18 rg 50 122 Td (Phase 7 is done.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+9 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 4 0 R >>
+endobj
+10 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 5 0 R >>
+endobj
+11 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 6 0 R >>
+endobj
+12 0 obj
+<< /Type /Page /Parent 13 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 7 0 R >>
+endobj
+13 0 obj
+<< /Type /Pages /Kids [8 0 R 9 0 R 10 0 R 11 0 R 12 0 R] /Count 5 >>
+endobj
+14 0 obj
+<< /Type /Catalog /Pages 13 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000147 00000 n 
+0000004709 00000 n 
+0000009354 00000 n 
+0000013299 00000 n 
+0000016653 00000 n 
+0000020709 00000 n 
+0000020846 00000 n 
+0000020983 00000 n 
+0000021121 00000 n 
+0000021259 00000 n 
+0000021397 00000 n 
+0000021482 00000 n 
+trailer << /Size 15 /Root 14 0 R >>
+startxref
+21533
+%%EOF
