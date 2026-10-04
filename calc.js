@@ -113,3 +113,24 @@ todayBtn.addEventListener("click", function () {
   renderEvents();
 });
 
+
+// selecting date fault
+function isSameDate(year, month, day, dateObject) {
+  return (
+    year === dateObject.getFullYear() &&
+    month === dateObject.getMonth() &&
+    day === dateObject.getDate()
+  );
+}
+if (
+  year === selectedDate.year &&
+  month === selectedDate.month &&
+  day === selectedDate.day
+) {
+  dayCell.classList.add("selected");
+}
+const today = new Date();
+if (isSameDate(year, month, day, today)) {
+  dayCell.classList.add("today");
+}
+
