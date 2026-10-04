@@ -180,9 +180,6 @@
             </div>
           </section>
 
-
-
-
           <!-- FOR NOTES -->
           <section class="card card-notes" id="card-notes">
             <div class="card-hero-header">
@@ -206,10 +203,10 @@
                   <p>Create a new note or select one.</p>
                 </div>
                 <form id="noteForm" class="hidden">
-                            <input type="text" id="noteTitle" placeholder="Note title" />
-                            <textarea
-                            id="noteContent"
-                            placeholder="Write your note here..."
+                  <input type="text" id="noteTitle" placeholder="Note title" />
+                  <textarea
+                    id="noteContent"
+                    placeholder="Write your note here..."
                   ></textarea>
                   <div class="editor-actions">
                     <button type="submit">Save Note</button>
@@ -221,34 +218,36 @@
             </section>
           </section>
 
+          <!-- FOR CALENDER -->
+
           <section class="card card-calendar" id="card-calendar">
             <div class="calendar-header">
- <button id="prevMonth">&lt;</button>
- <div>
- <h1 id="monthTitle"></h1>
- <button id="todayBtn">Today</button>
- </div>
- <button id="nextMonth">&gt;</button>
- </div>
- <div class="weekday-row">
- <div>Sun</div>
- <div>Mon</div>
- <div>Tue</div>
- <div>Wed</div>
- <div>Thu</div>
- <div>Fri</div>
- <div>Sat</div>
- </div>
- <div id="calendarGrid" class="calendar-grid"></div>
- <section class="event-panel">
- <h2 id="selectedDateTitle">Select a date</h2>
- <form id="eventForm">
- <input id="eventTitle" type="text" placeholder="Event title">
- <input id="eventTime" type="time">
- <button type="submit">Add Event</button>
- </form>
- <div id="eventList"></div>
- </section>
+              <button id="prevMonth">&lt;</button>
+              <div>
+                <h1 id="monthTitle"></h1>
+                <button id="todayBtn">Today</button>
+              </div>
+              <button id="nextMonth">&gt;</button>
+            </div>
+            <div class="weekday-row">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div id="calendarGrid" class="calendar-grid"></div>
+            <section class="event-panel">
+              <h2 id="selectedDateTitle">Select a date</h2>
+              <form id="eventForm">
+                <input id="eventTitle" type="text" placeholder="Event title" />
+                <input id="eventTime" type="time" />
+                <button type="submit">Add Event</button>
+              </form>
+              <div id="eventList"></div>
+            </section>
           </section>
         </div>
       </main>
