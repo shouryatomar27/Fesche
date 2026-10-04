@@ -22,7 +22,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background-color: var(--bg-dark);
-    color: #f8fafc;
+    color: #f8fafcef;
     font-family: var(--font-body);
     font-size: 14px;
     overflow-x: hidden;
@@ -71,7 +71,7 @@ body {
     transform: rotate(-6deg);
     animation: cyanDrift 16s ease-in-out infinite alternate;
 }
-
+/* idk */
 .aurora-ribbon-magenta {
     width: 520px;
     height: 240px;
