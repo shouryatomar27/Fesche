@@ -34,6 +34,7 @@ body {
     pointer-events: none;
 }
 
+/* Background Aurora Effects */
 .aurora-backdrop {
     position: fixed;
     inset: 0;
@@ -113,6 +114,7 @@ body {
     }
 }
 
+/* App Header & Structure */
 .app-shell {
     position: relative;
     z-index: 1;
@@ -206,6 +208,7 @@ body {
     }
 }
 
+/* Mode Switcher */
 .mode-switcher {
     position: relative;
     display: flex;
@@ -275,6 +278,7 @@ body {
     color: #cbd5e1;
 }
 
+/* Schematic Viewport & SVG Wires */
 .schematic-viewport {
     flex: 1;
     display: flex;
@@ -351,6 +355,7 @@ body {
     filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
 }
 
+/* Cards Base */
 .card {
     position: absolute;
     border-radius: var(--card-radius);
@@ -396,6 +401,7 @@ body {
     flex: 1;
 }
 
+/* Card 1: Task Manager */
 .card-task {
     left: calc(60 / 1100 * 100%);
     top: calc(95 / 680 * 100%);
@@ -436,6 +442,11 @@ body {
     width: 60%;
     height: 100%;
     background: linear-gradient(90deg, #3b82f6, #06b6d4);
+}
+
+.task-stats {
+    color: black;
+    padding: 5px 10px;
 }
 
 .task-list {
@@ -523,39 +534,6 @@ body {
     color: #94a3b8;
 }
 
-.pill-tag,
-[class*="tag-"] {
-    font-size: 10px;
-    font-weight: 600;
-    padding: 2px 7px;
-    border-radius: 6px;
-}
-
-.tag-blue {
-    background: #eff6ff;
-    color: #2563eb;
-}
-
-.tag-slate {
-    background: #f1f5f9;
-    color: #475569;
-}
-
-.tag-emerald {
-    background: #ecfdf5;
-    color: #059669;
-}
-
-.tag-amber {
-    background: #fffbeb;
-    color: #d97706;
-}
-
-.tag-purple {
-    background: #f5f3ff;
-    color: #7c3aed;
-}
-
 .card-footer-action {
     margin-top: 8px;
     padding-top: 6px;
@@ -580,15 +558,12 @@ body {
     color: #64748b;
 }
 
-.input-placeholder {
-    flex: 1;
-}
-
+/* Card 2: Notes */
 .card-notes {
     left: calc(60 / 1100 * 100%);
     top: calc(480 / 680 * 100%);
     width: calc(340 / 1100 * 100%);
-    height: calc(400/ 680 * 100%);
+    height: calc(400 / 680 * 100%);
     background-color: var(--card-slate-bg);
     box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
     overflow-y: auto;
@@ -600,304 +575,6 @@ body {
     font-weight: 600;
     color: #475569;
 }
-
-.notes-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    flex: 1;
-}
-
-.note-card-item {
-    background: rgba(255, 255, 255, 0.65);
-    border-radius: 12px;
-    padding: 8px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.note-item-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.note-item-title {
-    font-size: 11.5px;
-    font-weight: 700;
-    color: var(--card-text);
-}
-
-.note-time {
-    font-size: 9.5px;
-    color: #64748b;
-}
-
-.note-item-preview {
-    font-size: 10px;
-    color: #475569;
-    line-height: 1.3;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin: 3px 0;
-}
-
-.note-item-tags {
-    display: flex;
-    gap: 4px;
-}
-
-.mini-tag {
-    font-size: 9px;
-    font-weight: 600;
-    color: #475569;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-    padding: 1px 4px;
-}
-
-.card-calendar {
-    left: calc(730 / 1100 * 100%);
-    top: calc(130 / 680 * 100%);
-    width: calc(320 / 1100 * 100%);
-    height: calc(330 / 680 * 100%);
-    background-color: var(--card-slate-bg);
-    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
-    overflow-y: auto; 
-}
-
-.calendar-month-badge {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 100px;
-    padding: 2px 8px;
-}
-
-.cal-month-name {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--card-text);
-}
-
-.cal-nav-btn {
-    background: none;
-    border: none;
-    font-size: 14px;
-    font-weight: 700;
-    color: #475569;
-    cursor: pointer;
-}
-
-.calendar-widget {
-    background: rgba(255, 255, 255, 0.55);
-    border-radius: 14px;
-    padding: 10px 12px;
-    margin-bottom: 10px;
-}
-
-.cal-weekdays,
-.cal-days-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-}
-
-.cal-weekdays {
-    font-size: 10px;
-    font-weight: 700;
-    color: #64748b;
-    margin-bottom: 6px;
-}
-
-.cal-days-grid {
-    gap: 3px;
-}
-
-.cal-day {
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 0;
-    border-radius: 6px;
-    position: relative;
-    cursor: pointer;
-}
-
-.cal-day.dim {
-    color: #94a3b8;
-    opacity: 0.5;
-}
-
-.cal-day.has-dot::after {
-    content: "";
-    position: absolute;
-    bottom: 2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    background-color: #2563eb;
-}
-
-.cal-day.is-today {
-    background-color: #0f172a;
-    color: #ffffff;
-    border-radius: 8px;
-}
-
-.cal-day.is-today::after {
-    background-color: #38bdf8;
-}
-
-.calendar-agenda-preview {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.agenda-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 10px;
-    background: rgba(255, 255, 255, 0.65);
-    border-radius: 10px;
-}
-
-.agenda-indicator {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.dot-cyan {
-    background-color: #0284c7;
-}
-
-.dot-purple {
-    background-color: #7c3aed;
-}
-
-.agenda-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.agenda-time {
-    font-size: 9.5px;
-    font-weight: 700;
-    color: #475569;
-}
-
-.agenda-event {
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--card-text);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-#view-blueprint:checked~.app-shell .card-body,
-#view-blueprint:checked~.app-shell .card-tag-pill,
-#view-blueprint:checked~.app-shell .counter-badge,
-#view-blueprint:checked~.app-shell .notes-count,
-#view-blueprint:checked~.app-shell .calendar-month-badge {
-    display: none;
-}
-
-#view-blueprint:checked~.app-shell .card-hero-header {
-    margin-bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#view-blueprint:checked~.app-shell .title-wrap {
-    width: 100%;
-    text-align: center;
-}
-
-#view-blueprint:checked~.app-shell .card-headline {
-    font-size: 38px;
-    font-weight: 800;
-    text-align: center;
-}
-
-/* add dock or footer display none */
-.app-dock {
-    /* display: inline-flex; */
-    display: none;
-    align-items: center;
-    align-self: center;
-    gap: 8px;
-    background: rgba(15, 23, 42, 0.65);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 100px;
-    padding: 6px 16px;
-    margin-top: 10px;
-}
-
-.dock-module {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 12px;
-    border-radius: 100px;
-    color: #94a3b8;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.dock-module.dock-active {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.dock-divider {
-    width: 1px;
-    height: 16px;
-    background: rgba(255, 255, 255, 0.12);
-}
-
-@media (max-width: 900px) {
-    .app-shell {
-        padding: 16px;
-    }
-
-    .schematic-viewport {
-        overflow-x: auto;
-    }
-
-    .canvas-wrapper {
-        min-width: 860px;
-    }
-}
-
-/* .deletebtn{
-    position: absolute;
-    font-size: 20px;
-    padding: 2px;
-    border: none;
-} */
-
-.task-stats {
-    color: black;
-    padding: 5px 10px;
-}
-
-
-/* CSS FOR NOTES */
 
 .note-editor {
     padding-left: 20px;
@@ -965,6 +642,186 @@ button {
     place-items: center;
     min-height: 100%;
     text-align: center;
+    color: black;
+    padding-bottom: 10px;
+}
+
+/* Card 3: Calendar */
+.card-calendar {
+    left: calc(730 / 1100 * 100%);
+    top: calc(130 / 680 * 100%);
+    width: calc(320 / 1100 * 100%);
+    height: calc(330 / 680 * 100%);
+    background-color: var(--card-slate-bg);
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.calendar-header button {
+    cursor: pointer;
+}
+
+#monthTitleDiv {
+    width: 148px;
+    text-align: center;
+}
+
+#monthTitle {
+    width: 148px;
+    color: black;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.678);
+}
+
+.weekday-row,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.weekday-row div {
+    padding: 12px 6px;
+    text-align: center;
+    color: #9da8be;
+}
+
+.calendar-grid {
+    gap: 8px;
+}
+
+.day-cell {
+    text-align: center;
+    min-height: 37px;
+    padding: 6px;
+    background: #242430;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.day-cell:hover {
+    background: #2d2d3a;
+}
+
+.day-cell.empty {
+    background: transparent;
+    cursor: default;
+}
+
+.day-cell.selected {
+    outline: 2px solid #6d82eae1;
+}
+
+.day-cell.today {
+    font-weight: bold;
+}
+
+.event-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-top: 10px;
+    background: white;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 12px;
+    background: #242430;
+    border-radius: 10px;
+}
+
+/* Blueprint View Mode Overrides */
+#view-blueprint:checked~.app-shell .card-body,
+#view-blueprint:checked~.app-shell .card-tag-pill,
+#view-blueprint:checked~.app-shell .counter-badge,
+#view-blueprint:checked~.app-shell .notes-count {
+    display: none;
+}
+
+#view-blueprint:checked~.app-shell .card-hero-header {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#view-blueprint:checked~.app-shell .title-wrap {
+    width: 100%;
+    text-align: center;
+}
+
+#view-blueprint:checked~.app-shell .card-headline {
+    font-size: 38px;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* Dock / Footer */
+.app-dock {
+    display: none;
+    align-items: center;
+    align-self: center;
+    gap: 8px;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100px;
+    padding: 6px 16px;
+    margin-top: 10px;
+}
+
+.dock-module {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 100px;
+    color: #94a3b8;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dock-module.dock-active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.dock-divider {
+    width: 1px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+    .app-shell {
+        padding: 16px;
+    }
+
+    .schematic-viewport {
+        overflow-x: auto;
+    }
+
+    .canvas-wrapper {
+        min-width: 860px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -985,97 +842,13 @@ button {
     }
 }
 
-.empty-state {
-    color: black;
-    padding-bottom: 10px;
-}
-
-calendar-header {
- display: flex;
- align-items: center;
- justify-content: center;
- gap: 20px;
-}
-.calendar-header button {
- cursor: pointer;
-}
-.weekday-row,
-.calendar-grid {
- display: grid;
- grid-template-columns: repeat(7, 1fr);
-}
-.weekday-row div {
- padding: 12px 6px;
- text-align: center;
- color: #9da8be;
-}
-.calendar-grid {
- gap: 8px;
-}
-.day-cell {
- text-align: center;
- min-height: 37px;
- padding: 6px;
- background: #242430;
- border-radius: 12px;
- cursor: pointer;
- position: relative;
-}
-.day-cell:hover {
- background: #2d2d3a;
-}
-.day-cell.empty {
- background: transparent;
- cursor: default;
-}
-
-.day-cell.selected {
- outline: 2px solid #6d82eae1;
-}
-.day-cell.today {
- font-weight: bold;
-}
-.event-dot {
- width: 7px;
- height: 7px;
- border-radius: 50%;
- margin-top: 10px;
- background: white;
-}
-.event-item {
- display: flex;
- justify-content: space-between;
- gap: 12px;
- margin-top: 10px;
- padding: 12px;
- background: #242430;
- border-radius: 10px;
-}
 @media (max-width: 600px) {
- .day-cell {
- min-height: 58px;
- padding: 7px;
- }
- .calendar-app {
- padding: 14px;
- }
-}
-.calendar-header {
- display: flex;
- align-items: center;
- justify-content: space-between;
- gap: 20px;
-}
-#monthTitle{
-    width: 148px;
-    color: black;
-    font-size: 16px;
-    padding: 10px 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.678);
-}
-#monthTitleDiv{
-    width: 148px;
-    text-align: center;
+    .day-cell {
+        min-height: 58px;
+        padding: 7px;
+    }
+
+    .calendar-app {
+        padding: 14px;
+    }
 }
