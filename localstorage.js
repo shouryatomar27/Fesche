@@ -42,6 +42,8 @@ function saveEvents() {
 function loadEvents() {
   events = loadData("events", []);
 }
-function empty(){
-  // testing empty function
-}
+
+
+
+
+
