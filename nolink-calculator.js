@@ -225,6 +225,3 @@ function renderCalendar() {
  updateMonthTitle();
  renderCalendarGrid();
 }
-loadEvents();
-renderCalendar();
-renderEvents();
